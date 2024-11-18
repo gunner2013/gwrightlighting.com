@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Designer Portfolio</title>
+    <style>
+        body {
+            background-color: #4F4F4F;
+            color: white;
+            font-family: Arial, RedRock, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Image with Name */
+        .hero {
+            position: relative;
+            height: 400px;
+            background-image: url('your-image-file.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 70px;
+            margin: 0;
+            font-family: RedRock;
+        }
+
+        .hero hr {
+            width: 100%;
+            margin: 10px auto;
+            border: 4px solid #0a71c8; /* Accent color */
+        }
+
+        .hero h2 {
+            color: #FFFFFF;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+        }
+
+        .hero h5 {
+            color: #0a71c8;
+            margin: 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            background-color: #2F2F2F;
+        }
+
+        /* Style for each navigation box */
+        nav div {
+            position: relative;
+            width: 60px;
+            height: 40;
+            margin: 0 5px;
+            background-color: #003366; /* Dark blue by default */
+            transition: all 0.3s ease;
+        }
+
+        /* Make the box completely filled with a lighter blue when hovered */
+        nav div:hover {
+            background-color: #0a71c8; /* Light blue on hover */
+        }
+
+        nav div a {
+            text-decoration: none;
+            color: inherit; /* Keep text color consistent */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        nav div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        nav div span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            color: white;
+        }
+
+        /* Hover effect: Text appears */
+        nav div:hover img {
+            transform: translateY(-10px);
+		}
+
+        nav div:hover span {
+            transform: translate(-50%, -10px);
+            opacity: 1;
+        }
+
+        /* Active class to keep the current page highlighted */
+        nav div.active {
+            background-color: #0a71c8; /* Lighter blue for the active page */
+        }
+
+        /* Show Tiles */
+        .show-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .show-tile {
+            background-color: #000;
+            border: 2px solid #0a71c8;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .show-tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-placeholder {
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            flex-shrink: 0;
+        }
+
+        .show-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .show-info h3 {
+            margin: 0 0 10px 0;
+            color: #0a71c8;
+        }
+
+        .show-info p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Large image with centered name and line -->
+<div class="hero">
+    <div>
+        <h1>Gunner Wright</h1>
+        <hr>
+        <h2>NIU BFA Design Tech</h2>
+        <h5>Lighting Design</h5>
+    </div>
+</div>
+
+<!-- Navigation icons with hover and active page effect -->
+<nav>
+    <div class="active"> <!-- Mark this div as active if you're on the Home page -->
+        <a href="home.html">
+            <img src="icon-home.png" alt="Home Icon"> <!-- Replace with your icon -->
+            <span>Home</span>
+        </a>
+    </div>
+    <div>
+        <a href="about.html">
+            <img src="icon-about.png" alt="About Icon"> <!-- Replace with your icon -->
+            <span>About Me</span>
+        </a>
+    </div>
+    <div>
+        <a href="images.html">
+            <img src="icon-images.png" alt="Images Icon"> <!-- Replace with your icon -->
+            <span>Images</span>
+        </a>
+    </div>
+    <div>
+        <a href="contact.html">
+            <img src="icon-contact.png" alt="Contact Icon"> <!-- Replace with your icon -->
+            <span>Contact</span>
+        </a>
+    </div>
+</nav>
+
+<!-- Show Tiles -->
+<div class="show-container">
+    <!-- Blank Tile to copy and paste -->
+    <div class="show-tile">
+        <div class="image-placeholder"></div>
+        <div class="show-info">
+            <h3>Show Name</h3>
+            <p>Show description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    
+    <!-- Another example tile -->
+    <div class="show-tile">
+        <div class="image-placeholder"></div>
+        <div class="show-info">
+            <h3>Another Show</h3>
+            <p>Description for another show.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
