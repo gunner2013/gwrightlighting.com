@@ -4,61 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunner Wright Lighting</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="file:///D|/Website/css/bootstrap-4.4.1.css"> <!-- Adjust path accordingly -->
-    
-    <!-- Importing Fira Mono font for Glitch effect -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400" rel="stylesheet">
 
     <style>
+        /* Custom RedRock font */
+        @font-face {
+            font-family: 'RedRock';
+            src: url('https://github.com/gunner2013/gwrightlighting.com/blob/main/Fonts/RedRock.ttf?raw=true') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font: 400 1em/1.5 "Neuton", sans-serif;
-            background: #090d00;
-            color: rgba(255,255,255,.25);
-            text-align: center;
             margin: 0;
+            padding: 0;
+            background: #090d00;
+            color: white;
+            font-family: 'Fira Mono', monospace;
+        }
+
+        /* Navbar styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            z-index: 100;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 60px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0074FF;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/HeaderImag.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            text-align: center;
+            padding-top: 80px;
         }
 
-        p {
-            text-transform: uppercase;
-            letter-spacing: .25em;
-            display: inline-block;
-            padding: 0.5em 0;
-            position: relative;
-            top: 10%;  /* Adjusted for better positioning */
-            left: 50%;
-            width: auto;
-            margin: 0 0 0 -50%;
-        }
-
-        /* Glitch Text */
-        .glitch-text {
-            font-family: 'Fira Mono', monospace;
-            font: 700 3em/1 "Fira Mono", monospace;
-            letter-spacing: 0;
-            padding: .25em 0 .325em;
-            display: block;
-            margin: 0 auto;
-            text-shadow: 0 0 80px rgba(255,255,255,.5);
+        .hero-text {
+            font-size: 2.5em; /* Adjusted font size */
+            letter-spacing: 0.1em;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, .5);
             color: white;
-            animation: glitch 1s linear infinite;
+            position: relative;
         }
 
-        /* Glitch effect animation */
+        /* Glitch effect */
+        .glitch-text {
+            font-size: 3em; /* Adjusted to fit better */
+            letter-spacing: 0;
+            text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+            color: white;
+            position: relative;
+            animation: glitch 1s linear infinite;
+            font-family: 'RedRock', sans-serif; /* Applying the custom RedRock font */
+        }
+
         @keyframes glitch {
-            2%,64% {
-                transform: translate(2px,0) skew(0deg);
+            2%, 64% {
+                transform: translate(2px, 0) skew(0deg);
             }
-            4%,60% {
-                transform: translate(-2px,0) skew(0deg);
+            4%, 60% {
+                transform: translate(-2px, 0) skew(0deg);
             }
             62% {
-                transform: translate(0,0) skew(5deg); 
+                transform: translate(0, 0) skew(5deg);
             }
         }
 
@@ -72,196 +118,93 @@
         .glitch-text:before {
             animation: glitchTop 1s linear infinite;
             clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
         }
 
         @keyframes glitchTop {
-            2%,64% {
-                transform: translate(2px,-2px);
+            2%, 64% {
+                transform: translate(2px, -2px);
             }
-            4%,60% {
-                transform: translate(-2px,2px);
+            4%, 60% {
+                transform: translate(-2px, 2px);
             }
             62% {
-                transform: translate(13px,-1px) skew(-13deg); 
+                transform: translate(13px, -1px) skew(-13deg);
             }
         }
 
         .glitch-text:after {
             animation: glitchBottom 1.5s linear infinite;
             clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
         }
 
         @keyframes glitchBottom {
-            2%,64% {
-                transform: translate(-2px,0);
+            2%, 64% {
+                transform: translate(-2px, 0);
             }
-            4%,60% {
-                transform: translate(-2px,0);
+            4%, 60% {
+                transform: translate(-2px, 0);
             }
             62% {
-                transform: translate(-22px,5px) skew(21deg); 
+                transform: translate(-22px, 5px) skew(21deg);
             }
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .logo img {
-            width: 70px;
-            height: auto;
-            cursor: pointer;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 40px;
-            font-size: 18px;
-            transition: border 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0074FF;
-        }
-
-        nav a.selected {
-            border: 3px solid #0074FF;
-            padding: 5px 20px;
-            border-radius: 12px;
-            box-sizing: border-box;
-            margin: 0;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/HeaderImag.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
+        /* Button styles */
         .button {
-            display: inline-block;
-            border-radius: 4px;
+            margin-top: 20px;
+            padding: 10px 30px;
             background-color: #0074FF;
+            color: white;
+            font-size: 1.2em; /* Adjusted font size */
             border: none;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 22px;
-            padding: 15px 40px;
-            margin-top: 30px;
-            width: auto;
-            transition: all 0.3s ease;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
 
+        /* Footer */
         footer {
             position: fixed;
-            bottom: 0;
-            left: 0;
+            bottom: 10px;
             width: 100%;
             text-align: center;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            nav a {
-                font-size: 16px;
-            }
-
-            .button {
-                font-size: 18px;
-                padding: 12px 35px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            nav a {
-                font-size: 14px;
-            }
-
-            .button {
-                font-size: 16px;
-                padding: 10px 30px;
-            }
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8em;
         }
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <header>
         <div class="logo">
-            <img src='https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/Trans-Logo-2024-G.png?raw=true' alt="GW Logo" width="70" height="auto">
+            <img src='https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/Trans-Logo-2024-G.png?raw=true' alt="GW Logo">
         </div>
         <nav>
-            <a href="#portfolio" class="selected">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <!-- Glitch Effect Text -->
-        <p><span class="glitch-text" title="Gunner Wright">Gunner Wright</span>
-		<p><span class="glitch-text" title="Lighting and Electric">Lighting and Electric</span></p>
-        
-        
-        <!-- Button Below the Header -->
-        <button class="button" onclick="window.location.href='portfolio.html'"><span>Portfolio</span></button>
+        <p class="hero-text">
+            <span class="glitch-text" title="Gunner Wright">Gunner Wright</span>
+        </p>
+        <p class="hero-text">
+            <span class="glitch-text" title="Lighting and Electric">Lighting and Electric</span>
+        </p>
+        <button class="button" onclick="window.location.href='portfolio.html'">Portfolio</button>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Gunner Wright</p>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Gunner Wright
     </footer>
-
-    <!-- jQuery and Bootstrap JS -->
-    <script src="file:///D|/Website/js/jquery-3.4.1.min.js"></script>
-    <script src="file:///D|/Website/js/popper.min.js"></script>
-    <script src="file:///D|/Website/js/bootstrap-4.4.1.js"></script>
-
-    <script>
-        window.onload = function() {
-            var glitchText = document.querySelectorAll('.glitch-text');
-            glitchText.forEach(function(text) {
-                text.classList.add('glitch-text');  // Applying the glitch animation
-            });
-        };
-    </script>
   </body>
 </html>
