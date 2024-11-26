@@ -1,191 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunner Wright - Lighting Designer</title>
+    <title>Gunner Wright Lighting</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="file:///D|/Website/css/bootstrap-4.4.1.css"> <!-- Adjust path accordingly -->
+    
+    <!-- Importing Fira Mono font for Glitch effect -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400" rel="stylesheet">
+
     <style>
         body {
-            background-color: #333333; /* Charcoal gray background */
-            color: #ffffff; /* White text */
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #0d47a1; /* Darker blue accent */
-            padding: 30px;
+            font: 400 1em/1.5 "Neuton", sans-serif;
+            background: #090d00;
+            color: rgba(255,255,255,.25);
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-        header h1 {
             margin: 0;
-            font-size: 2.8em;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        nav {
             display: flex;
             justify-content: center;
-            background-color: #1E1E1E; /* Darker charcoal gray for nav */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            padding: 10px 0;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
-        nav a {
-            color: #ffffff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 1.2em;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 5px;
-            margin: 0 10px;
+
+        p {
+            text-transform: uppercase;
+            letter-spacing: .25em;
+            display: inline-block;
+            padding: 0.5em 0;
+            position: relative;
+            top: 10%;  /* Adjusted for better positioning */
+            left: 50%;
+            width: auto;
+            margin: 0 0 0 -50%;
         }
-        nav a:hover {
-            background-color: #1976d2; /* Slightly lighter blue for hover effect */
-            color: #ffffff;
-        }
-        .container {
-            padding: 40px 20px;
-            max-width: 1200px;
+
+        /* Glitch Text */
+        .glitch-text {
+            font-family: 'Fira Mono', monospace;
+            font: 700 3em/1 "Fira Mono", monospace;
+            letter-spacing: 0;
+            padding: .25em 0 .325em;
+            display: block;
             margin: 0 auto;
+            text-shadow: 0 0 80px rgba(255,255,255,.5);
+            color: white;
+            animation: glitch 1s linear infinite;
         }
-        .home, .about, .contact {
-            display: none;
-            animation: fadeIn 1s;
+
+        /* Glitch effect animation */
+        @keyframes glitch {
+            2%,64% {
+                transform: translate(2px,0) skew(0deg);
+            }
+            4%,60% {
+                transform: translate(-2px,0) skew(0deg);
+            }
+            62% {
+                transform: translate(0,0) skew(5deg); 
+            }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .glitch-text:before,
+        .glitch-text:after {
+            content: attr(title);
+            position: absolute;
+            left: 0;
         }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+
+        .glitch-text:before {
+            animation: glitchTop 1s linear infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
         }
-        .gallery img {
-            margin: 10px 0;
-            max-width: calc(33.33% - 10px); /* Three images per ro w */
+
+        @keyframes glitchTop {
+            2%,64% {
+                transform: translate(2px,-2px);
+            }
+            4%,60% {
+                transform: translate(-2px,2px);
+            }
+            62% {
+                transform: translate(13px,-1px) skew(-13deg); 
+            }
+        }
+
+        .glitch-text:after {
+            animation: glitchBottom 1.5s linear infinite;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        }
+
+        @keyframes glitchBottom {
+            2%,64% {
+                transform: translate(-2px,0);
+            }
+            4%,60% {
+                transform: translate(-2px,0);
+            }
+            62% {
+                transform: translate(-22px,5px) skew(21deg); 
+            }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .production {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #424242;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
+            padding: 10px 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            z-index: 100;
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-        .production img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+        header .logo img {
+            width: 70px;
+            height: auto;
+            cursor: pointer;
         }
-        .production:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
         }
-        .production h3 {
-            margin-top: 0;
-            font-size: 1.8em;
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 18px;
+            transition: border 0.3s ease;
         }
-        .production p {
-            margin: 10px 0;
+
+        nav a:hover {
+            color: #0074FF;
         }
-        footer {
-            background-color: #0d47a1; /* Darker blue accent */
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
-        }
-        footer p {
+
+        nav a.selected {
+            border: 3px solid #0074FF;
+            padding: 5px 20px;
+            border-radius: 12px;
+            box-sizing: border-box;
             margin: 0;
-            font-size: 1em;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/HeaderImag.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #0074FF;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 22px;
+            padding: 15px 40px;
+            margin-top: 30px;
+            width: auto;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .button {
+                font-size: 18px;
+                padding: 12px 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 10px 30px;
+            }
         }
     </style>
-    <script>
-        function showSection(section) {
-            document.querySelectorAll('.home, .about, .contact').forEach(function(el) {
-                el.style.display = 'none';
-            });
-            document.querySelector('.' + section).style.display = 'block';
-        }
-        window.onload = function() {
-            showSection('home'); // Show home section by default
-        };
-        function goToProductionPage(page) {
-            window.location.href = page;
-        }
-    </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Gunner Wright - Student Lighting Designer</h1>
+        <div class="logo">
+            <img src='https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/Trans-Logo-2024-G.png?raw=true' alt="GW Logo" width="70" height="auto">
+        </div>
+        <nav>
+            <a href="#portfolio" class="selected">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('about')">About</a>
-        <a href="#" onclick="showSection('contact')">Contact</a>
-        <a href="#" onclick="showSection('gallery')">Gallery</a>
-    </nav>
-    <div class="container">
-        <div class="home">
-            <h2>Welcome to My Personal Webpage!</h2>
-            <div class="production" onclick="goToProductionPage('spectacular-lights.html')">
-                <img src="spectacular-lights.jpg" alt="Spectacular Lights">
-                <div>
-                    <h3>Upcoming Production: Spectacular Lights</h3>
-                    <p>Date: July 20, 2024</p>
-                    <p>Location: Grand Theatre</p>
-                    <p>Description: Join us for an evening of stunning lighting displays and theatrical performances.</p>
-                </div>
-            </div>
-            <div class="production" onclick="goToProductionPage('illuminated-dreams.html')">
-                <img src="illuminated-dreams.jpg" alt="Illuminated Dreams">
-                <div>
-                    <h3>Recent Production: Illuminated Dreams</h3>
-                    <p>Date: May 15, 2024</p>
-                    <p>Location: City Arts Center</p>
-                    <p>Description: A breathtaking journey through a world of light and shadow, showcasing cutting-edge lighting design.</p>
-                </div>
-            </div>
-            <div class="production" onclick="goToProductionPage('lightscapes.html')">
-                <img src="lightscapes.jpg" alt="Lightscapes">
-                <div>
-                    <h3>Past Production: Lightscapes</h3>
-                    <p>Date: March 10, 2024</p>
-                    <p>Location: Downtown Theatre</p>
-                    <p>Description: An innovative performance blending modern dance with dynamic lighting effects.</p>
-                </div>
-            </div>
-        </div>
-        <div class="about">
-            <h2>About Me</h2>
-            <p>I'm a student lighting designer with a passion for creating captivating visual experiences. My work ranges from theatre productions to architectural lighting. I am always exploring new techniques and technologies to enhance my designs.</p>
-        </div>
-        <div class="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any inquiries or collaborations.</p>
-            <p>Email: <a href="mailto:gunner.wright@example.com" style="color: #ffffff;">gunner.wright@example.com</a></p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Gunner Wright. All rights reserved.</p>
+
+    <section class="hero">
+        <!-- Glitch Effect Text -->
+        <p><span class="glitch-text" title="Gunner Wright">Gunner Wright</span>
+		<p><span class="glitch-text" title="Lighting and Electric">Lighting and Electric</span></p>
+        
+        
+        <!-- Button Below the Header -->
+        <button class="button" onclick="window.location.href='portfolio.html'"><span>Portfolio</span></button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gunner Wright</p>
     </footer>
-</body>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="file:///D|/Website/js/jquery-3.4.1.min.js"></script>
+    <script src="file:///D|/Website/js/popper.min.js"></script>
+    <script src="file:///D|/Website/js/bootstrap-4.4.1.js"></script>
+
+    <script>
+        window.onload = function() {
+            var glitchText = document.querySelectorAll('.glitch-text');
+            glitchText.forEach(function(text) {
+                text.classList.add('glitch-text');  // Applying the glitch animation
+            });
+        };
+    </script>
+  </body>
 </html>
