@@ -48,35 +48,23 @@
             height: auto;
             cursor: pointer; /* Make the logo appear clickable */
         }
-
-        nav {
+nav {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-evenly;  /* Space items evenly within the navbar */
+            align-items: center;           /* Align items vertically in the center */
+            width: 100%;                   /* Ensure the navbar takes the full width */
+            padding: 0 40px;               /* Add space on the left and right edges */
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;  /* Reduced margin for better alignment */
-            font-size: 1rem;  /* Relative size */
-            font-weight: bold;
-            padding: 8px 12px;  /* Added padding to ensure consistent alignment */
-            transition: color 0.3s ease, border 0.3s ease;
-            border-radius: 12px; /* Rounded corners for nav items */
-            display: inline-flex;
-            align-items: center; /* Align items vertically */
+            font-size: 16px;
+            transition: color 0.3s;
         }
 
-        /* Hover effect */
         nav a:hover {
-            color: #0074FF; /* Accent color for hover effect */
-        }
-
-        /* Highlight effect for selected page */
-        nav a.selected {
-            border: 3px solid #0074FF; /* Accent color for the border */
-            padding: 5px 20px; /* Add space between the text and the border */
-            box-sizing: border-box; /* Ensure padding doesn't interfere with the border size */
+            color: #0074FF;
         }
 
         .portfolio-section {
