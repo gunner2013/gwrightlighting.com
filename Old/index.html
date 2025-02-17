@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunner Wright - Lighting Designer</title>
+    <style>
+        body {
+            background-color: #333333; /* Charcoal gray background */
+            color: #ffffff; /* White text */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0d47a1; /* Darker blue accent */
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1E1E1E; /* Darker charcoal gray for nav */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            padding: 10px 0;
+        }
+        nav a {
+            color: #ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #1976d2; /* Slightly lighter blue for hover effect */
+            color: #ffffff;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .home, .about, .contact {
+            display: none;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery img {
+            margin: 10px 0;
+            max-width: calc(33.33% - 10px); /* Three images per ro w */
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .production {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #424242;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .production img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        .production:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .production h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        .production p {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #0d47a1; /* Darker blue accent */
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.home, .about, .contact').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            document.querySelector('.' + section).style.display = 'block';
+        }
+        window.onload = function() {
+            showSection('home'); // Show home section by default
+        };
+        function goToProductionPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Gunner Wright - Student Lighting Designer</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('gallery')">Gallery</a>
+    </nav>
+    <div class="container">
+        <div class="home">
+            <h2>Welcome to My Personal Webpage!</h2>
+            <div class="production" onclick="goToProductionPage('spectacular-lights.html')">
+                <img src="spectacular-lights.jpg" alt="Spectacular Lights">
+                <div>
+                    <h3>Upcoming Production: Spectacular Lights</h3>
+                    <p>Date: July 20, 2024</p>
+                    <p>Location: Grand Theatre</p>
+                    <p>Description: Join us for an evening of stunning lighting displays and theatrical performances.</p>
+                </div>
+            </div>
+            <div class="production" onclick="goToProductionPage('illuminated-dreams.html')">
+                <img src="illuminated-dreams.jpg" alt="Illuminated Dreams">
+                <div>
+                    <h3>Recent Production: Illuminated Dreams</h3>
+                    <p>Date: May 15, 2024</p>
+                    <p>Location: City Arts Center</p>
+                    <p>Description: A breathtaking journey through a world of light and shadow, showcasing cutting-edge lighting design.</p>
+                </div>
+            </div>
+            <div class="production" onclick="goToProductionPage('lightscapes.html')">
+                <img src="lightscapes.jpg" alt="Lightscapes">
+                <div>
+                    <h3>Past Production: Lightscapes</h3>
+                    <p>Date: March 10, 2024</p>
+                    <p>Location: Downtown Theatre</p>
+                    <p>Description: An innovative performance blending modern dance with dynamic lighting effects.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I'm a student lighting designer with a passion for creating captivating visual experiences. My work ranges from theatre productions to architectural lighting. I am always exploring new techniques and technologies to enhance my designs.</p>
+        </div>
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+            <p>Email: <a href="mailto:gunner.wright@example.com" style="color: #ffffff;">gunner.wright@example.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gunner Wright. All rights reserved.</p>
+    </footer>
+</body>
+</html>
