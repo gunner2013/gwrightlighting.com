@@ -48,24 +48,39 @@
             height: auto;
             cursor: pointer; /* Make the logo appear clickable */
         }
-nav {
+        nav {
             display: flex;
-            justify-content: space-evenly;  /* Space items evenly within the navbar */
+            gap: 60px;
             align-items: center;           /* Align items vertically in the center */
-            width: 100%;                   /* Ensure the navbar takes the full width */
-            padding: 0 40px;               /* Add space on the left and right edges */
+            justify-content: flex-end;
+            padding-right: 40px;             /* Add space on the left and right edges */
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 25px;
             transition: color 0.3s;
         }
 
         nav a:hover {
             color: #0074FF;
         }
+
+        .selected {
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-style: italic;
+            color: #0074FF;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
+                 0 0 30px rgba(0, 116, 255, 0.8),  /* Middle layer */
+                 0 0 40px rgba(0, 116, 255, 0.6),  /* Outer layer */
+                 0 0 50px rgba(0, 116, 255, 0.4);  /* Farthest layer */
+        }
+         
 
         .portfolio-section {
             margin-top: 80px;
@@ -182,16 +197,16 @@ nav {
   </head>
   <body>
     <header>
-        <!-- Logo now wrapped in a link to act as the home button -->
+       
         <a href="index.html">
             <div class="logo">
                 <img src="https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/Trans-Logo-2024-G.png?raw=true" alt="GW Logo" width="70" height="auto">
             </div>
         </a>
         <nav>
-            <a href="#portfolio" class="selected">Portfolio</a> <!-- Selected page will have the box -->
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="portfolio.html" class="selected">Portfolio</a> <!-- Selected page will have the box -->
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -224,5 +239,33 @@ nav {
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
+    <div class="portfolio-item">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <!-- Front of card -->
+                <div class="flip-card-front">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/gunner2013/gwrightlighting.com/blob/main/Images/Theactrial-Lighting.png?raw=true" alt="Project 1">
+                    <div class="title">Theatrical</div>
+                </div>
+                <!-- Back of card -->
+                <div class="flip-card-back">
+                    <h3 class="title">Theatrical</h3>
+                    <div class="divider"></div>
+                    <ul class="show-list">
+                        <li>Show 1</li>
+                        <li>Show 2</li>
+                        <li>Show 3</li>
+                        <li>Show 4</li>
+                        <li>Show 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
   </body>
 </html>
