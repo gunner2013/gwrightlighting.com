@@ -87,9 +87,15 @@
             color: white;
             position: relative;
             font-family: 'RedRock', sans-serif; /* Applying the custom RedRock font */
-            background-color: rgba(36, 36, 36,50);
         }
 
+        .hero-text-box{
+            background-color: #444444;
+            padding: 20px;
+            border-style: double;
+
+
+        }
         .button {
             margin-top: 20px;
             padding: 10px 30px;
@@ -100,6 +106,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
+            border-style: double;
         }
 
         .button:hover {
@@ -110,7 +117,7 @@
         /* Footer */
         footer {
             position: fixed;
-            bottom: 10px;
+            bottom: 40px;
             width: 100%;
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
@@ -132,10 +139,13 @@
     </header>
 
     <!-- Hero Section -->
+    
     <section class="hero">
-        <p class="hero-text">Gunner Wright</p>
-        <p class="hero-text">Lighting and Electric</p>
-        <button class="button" onclick="window.location.href='portfolio.html'">Portfolio</button>
+            <div class="hero-text-box">
+            <p class="hero-text">Gunner Wright</p>
+            <p class="hero-text">Lighting and Electric</p>
+            <button class="button" onclick="window.location.href='portfolio.html'">Portfolio</button>
+        </div>
     </section>
 
     <!-- Footer -->
