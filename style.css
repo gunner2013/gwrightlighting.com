@@ -149,3 +149,57 @@ nav a:hover {
             0 0 50px rgba(0, 116, 255, 0.4);  /* Farthest layer */
 }
    
+
+.ErrorPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.ErrorPage-text-box{
+    background-color: #002864;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 2rem;
+    border-color: #383e46;
+    border-width: 6px;
+
+
+}
+.ErrorPage-text {
+    font-size: 6em; /* Adjusted font size */
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    color: white;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  }
+
+  .ErrorPageCommandLine{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vh; 
+    text-align: left;
+    color: orange;
+    border: orange;
+    border-style: solid;
+    border-radius: .5rem;
+    background-color: #000000;
+
+
+  }
