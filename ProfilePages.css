@@ -22,7 +22,13 @@
     margin-top: 80px;
     padding: 50px 30px;
     text-align: center;
-    background-color: #111;
+    background-color: #000000c4;
+    border-top: solid;
+    border-bottom: solid;
+    box-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
+    0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
+    0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
+    0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */;
 }
 
 .portfolio-section h2 {
@@ -118,3 +124,55 @@
 }
 
 
+
+
+.prot-text-box{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 27, 59),   /* Intense center glow */
+    0 0 30px rgba(0, 0, 0, 0.9),  /* Middle layer */
+
+
+
+
+}
+
+.Port-Title-text{
+    
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 12vh; /* Adjusted font size */
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    color: white;
+    position: relative;
+    font-family: 'RedRock', sans-serif; /* Applying the custom RedRock font */
+
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.show-item{
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: left;
+}
