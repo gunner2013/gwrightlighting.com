@@ -11,11 +11,15 @@ h2 {
     font-family: RedRock
 }
 
-.h2-port{
-    text-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
-            0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
-            0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
-            0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */
+.h2-port {
+    text-shadow: 0 0 20px rgba(0, 116, 255, 1),
+        /* Intense center glow */
+        0 0 30px rgba(0, 116, 255, 0.9),
+        /* Middle layer */
+        0 0 40px rgba(0, 116, 255, 0.7),
+        /* Outer layer */
+        0 0 50px rgba(0, 116, 255, 0.6);
+    /* Farthest layer */
 }
 
 h4 {
@@ -49,10 +53,15 @@ body {
     align-items: center;
     font-family: "Courier Prime", monospace;
     border-bottom: solid;
-    box-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
-    0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
-    0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
-    0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */;
+    box-shadow: 0 0 20px rgba(0, 116, 255, 1),
+        /* Intense center glow */
+        0 0 30px rgba(0, 116, 255, 0.9),
+        /* Middle layer */
+        0 0 40px rgba(0, 116, 255, 0.7),
+        /* Outer layer */
+        0 0 50px rgba(0, 116, 255, 0.6);
+    /* Farthest layer */
+    ;
 
 }
 
@@ -65,9 +74,11 @@ header .logo img {
 nav {
     display: flex;
     gap: 60px;
-    align-items: center;           /* Align items vertically in the center */
+    align-items: center;
+    /* Align items vertically in the center */
     justify-content: flex-end;
-    padding-right: 50px;              /* Add space on the left and right edges */
+    padding-right: 50px;
+    /* Add space on the left and right edges */
 }
 
 nav a {
@@ -90,7 +101,7 @@ nav a:hover {
 
 .nav-link:hover {
     color: #0074FF;
-    
+
 }
 
 .fa-solid {
@@ -108,10 +119,14 @@ nav a:hover {
     font-weight: bold;
     font-style: italic;
     color: #0074FF;
-    text-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
-            0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
-            0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
-            0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */
+    text-shadow: 0 0 20px rgba(0, 116, 255, 1),
+        /* Intense center glow */
+        0 0 30px rgba(0, 116, 255, 0.9),
+        /* Middle layer */
+        0 0 40px rgba(0, 116, 255, 0.7),
+        /* Outer layer */
+        0 0 50px rgba(0, 116, 255, 0.6);
+    /* Farthest layer */
 }
 
 /* Hero Section */
@@ -119,7 +134,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 100vh;
-  
+
 
     display: flex;
     flex-direction: column;
@@ -130,26 +145,33 @@ nav a:hover {
 }
 
 .hero-text {
-    font-size: 12vh; /* Adjusted font size */
+    font-size: 12vh;
+    /* Adjusted font size */
     letter-spacing: 0.1em;
     margin: 10px 0;
     text-shadow: 0 0 10px rgb(0, 0, 0);
     color: white;
     position: relative;
-    font-family: 'RedRock', sans-serif; /* Applying the custom RedRock font */
-    
+    font-family: 'RedRock', sans-serif;
+    /* Applying the custom RedRock font */
+
 }
 
-.hero-text-box{
+.hero-text-box {
     background-color: rgba(0, 0, 0, 0.89);
     padding: 20px;
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
-    0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
-    0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
-    0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */;
+    box-shadow: 0 0 20px rgba(0, 116, 255, 1),
+        /* Intense center glow */
+        0 0 30px rgba(0, 116, 255, 0.9),
+        /* Middle layer */
+        0 0 40px rgba(0, 116, 255, 0.7),
+        /* Outer layer */
+        0 0 50px rgba(0, 116, 255, 0.6);
+    /* Farthest layer */
+    ;
 
 
 
@@ -189,7 +211,7 @@ nav a:hover {
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 1px;
-}  
+}
 
 .ErrorPage {
     position: relative;
@@ -206,7 +228,7 @@ nav a:hover {
     padding-top: 80px;
 }
 
-.ErrorPage-text-box{
+.ErrorPage-text-box {
     background-color: #002864;
     padding: 20px;
     border-style: solid;
@@ -216,8 +238,10 @@ nav a:hover {
 
 
 }
+
 .ErrorPage-text {
-    font-size: 6em; /* Adjusted font size */
+    font-size: 6em;
+    /* Adjusted font size */
     letter-spacing: 0.1em;
     margin: 10px 0;
     text-shadow: 0 0 10px rgba(255, 255, 255, .5);
@@ -230,11 +254,11 @@ nav a:hover {
     margin: auto;
     width: 60%;
     padding: 10px;
-  }
+}
 
-  .ErrorPageCommandLine{
+.ErrorPageCommandLine {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2vh; 
+    font-size: 2vh;
     text-align: left;
     color: orange;
     border: orange;
@@ -243,55 +267,63 @@ nav a:hover {
     background-color: #000000;
 
 
-  }
-
-  @media (max-width:480) 
-{
-    .hero-text{
-        font-size: 2vh;
-    } 
 }
-  @media (max-width: 900px) {
+
+@media (max-width:480) {
+    .hero-text {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 900px) {
     .portfolio-section h2 {
-        font-size: 6vw;  /* Adjust for smaller screens */
+        font-size: 6vw;
+        /* Adjust for smaller screens */
     }
 
     .portfolio-item .title {
-        font-size: 35px;  /* Slightly smaller title size for tablets */
+        font-size: 35px;
+        /* Slightly smaller title size for tablets */
     }
 
     nav a {
-        font-size: 0.9rem; /* Slightly smaller nav text */
+        font-size: 0.9rem;
+        /* Slightly smaller nav text */
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 6vh;
     }
 }
 
 @media (max-width: 1050px) {
     .portfolio-section h2 {
-        font-size: 6vw;  /* Adjust for smaller screens */
+        font-size: 6vw;
+        /* Adjust for smaller screens */
     }
 
     .portfolio-item .title {
-        font-size: 35px;  /* Slightly smaller title size for tablets */
+        font-size: 35px;
+        /* Slightly smaller title size for tablets */
     }
 
     nav a {
-        font-size: 0.9rem; /* Slightly smaller nav text */
+        font-size: 0.9rem;
+        /* Slightly smaller nav text */
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 4vh;
     }
 }
 
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: black;
     border: white;
     border-style: solid;
 }
 
-.dropdown-item{
+.dropdown-item {
     color: white;
 }
