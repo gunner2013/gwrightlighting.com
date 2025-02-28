@@ -1,0 +1,37 @@
+.ev {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.ev-text {
+    font-size: 12vh; /* Adjusted font size */
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    color: white;
+    position: relative;
+    font-family: 'RedRock', sans-serif; /* Applying the custom RedRock font */
+    
+}
+
+.ev-text-box{
+    background-color: rgba(0, 0, 0, 0.89);
+    padding: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 116, 255, 1),   /* Intense center glow */
+    0 0 30px rgba(0, 116, 255, 0.9),  /* Middle layer */
+    0 0 40px rgba(0, 116, 255, 0.7),  /* Outer layer */
+    0 0 50px rgba(0, 116, 255, 0.6);  /* Farthest layer */;
+}
+
