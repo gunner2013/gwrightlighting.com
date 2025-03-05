@@ -176,3 +176,22 @@ hr {
     color: white;
     text-align: left;
 }
+
+
+
+.info-text-box{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 27, 59),   /* Intense center glow */
+    0 0 30px rgba(0, 0, 0, 0.9),  /* Middle layer */
+
+}
+
+
+.spacer{
+
+    padding: 2vh;
+}
